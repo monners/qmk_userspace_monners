@@ -40,9 +40,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         //,-----------------------------------------------------------------------.                    ,-----------------------------------------------------------------------.
            KC_TAB,     KC_TRNS,    KC_TRNS,    LCTL(KC_E), KC_TRNS,    KC_TRNS,                         MEH(KC_K), LCTL(KC_U), KC_UP,     LAG(KC_I),   LCTL(KC_P), LALT(KC_BSPC),
 	    //|-----------+-----------+-----------+-----------+-----------+-----------|                    |-----------+-----------+-----------+-----------+-----------+-----------|
-           KC_TRNS,    LCTL(KC_A), KC_LALT,    KC_LGUI,    MEH(KC_V),  KC_TRNS,                         LGUI(KC_Z), KC_LEFT,    KC_DOWN,    KC_RGHT,    KC_EXLM,    KC_GRV,
+           KC_TRNS,    LCTL(KC_A), KC_LALT,    KC_LGUI,    MEH(KC_V),  KC_TRNS,                         LGUI(KC_Z), KC_LEFT,    KC_DOWN,    KC_RGHT,    KC_MINS,    KC_GRV,
 	    //|-----------+-----------+-----------+-----------+-----------+-----------|                    |-----------+-----------+-----------+-----------+-----------+-----------|
-           KC_TRNS,    KC_TRNS,    KC_TRNS,    LCTL(KC_C), KC_TRNS,    KC_TRNS,                         LCA(KC_B),  LCTL(KC_N), RCS(KC_BSLS),MEH(KC_BSLS),KC_TRNS,  KC_ESC,
+           KC_TRNS,    KC_TRNS,    KC_TRNS,    LCTL(KC_C), KC_TRNS,    KC_TRNS,                         LCA(KC_B),  LCTL(KC_N), RCS(KC_BSLS),KC_EXLM,KC_TRNS,  KC_ESC,
         //|-----------+-----------+-----------+-----------+-----------+-----------+------|      |------+-----------+-----------+-----------+-----------+-----------+-----------|
                                                            KC_TRNS,    KC_TRNS,    KC_TRNS,      LGUI(KC_SPC), LCTL(KC_SLSH), KC_TRNS
 		    							               //`-------------------------------'      `-------------------------------'
@@ -53,7 +53,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	    //|-----------+-----------+-----------+-----------+-----------+-----------|                    |-----------+-----------+-----------+-----------+-----------+-----------|
            KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_VOLD,    KC_VOLU,    KC_MUTE,                         MEH(KC_M),  MEH(KC_N),  MEH(KC_E),  MEH(KC_I),  MEH(KC_O),  MEH(KC_QUOT),
 	    //|-----------+-----------+-----------+-----------+-----------+-----------|                    |-----------+-----------+-----------+-----------+-----------+-----------|
-           KC_TRNS,    KC_TRNS,    KC_TRNS,    DF(3),      DF(6),      KC_TRNS,                         KC_K,       KC_H,       KC_COMM,    KC_DOT,     SH_SLSH,    KC_ENT,
+           KC_TRNS,    KC_TRNS,    KC_TRNS,    DF(3),      DF(6),      KC_TRNS,                         LCA(KC_B),       LCA(KC_N),       RCS(KC_BSLS),MEH(KC_BSLS),     SH_SLSH,    KC_ENT,
         //|-----------+-----------+-----------+-----------+-----------+-----------+------|      |------+-----------+-----------+-----------+-----------+-----------+-----------|
                                                            KC_TRNS,    KC_TRNS,    KC_TRNS,      KC_TRNS, KC_TRNS, KC_RALT
 		    							               //`-------------------------------'      `-------------------------------'
@@ -75,9 +75,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         //,-----------------------------------------------------------------------.                    ,-----------------------------------------------------------------------.
            KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_END,     KC_TRNS,    KC_TRNS,                         KC_TRNS,    KC_TRNS,    KC_UP,      KC_TRNS,    KC_TRNS,    LCTL(KC_BSPC),
 	    //|-----------+-----------+-----------+-----------+-----------+-----------|                    |-----------+-----------+-----------+-----------+-----------+-----------|
-           KC_TRNS,    KC_HOME,    KC_LCTL,    KC_LALT,    KC_TRNS,    KC_TRNS,                         LCTL(KC_Z), KC_LEFT,    KC_DOWN,    KC_RGHT,    KC_EXLM,    KC_GRV,
+           KC_TRNS,    KC_HOME,    KC_LCTL,    KC_LALT,    KC_TRNS,    KC_TRNS,                         LCTL(KC_Z), KC_LEFT,    KC_DOWN,    KC_RGHT,    KC_MINS,    KC_GRV,
 	    //|-----------+-----------+-----------+-----------+-----------+-----------|                    |-----------+-----------+-----------+-----------+-----------+-----------|
-           KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,                         KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_ESC,
+           KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,                         KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_EXLM,    KC_TRNS,    KC_ESC,
         //|-----------+-----------+-----------+-----------+-----------+-----------+------|      |------+-----------+-----------+-----------+-----------+-----------+-----------|
                                                            KC_TRNS,    KC_TRNS,    KC_TRNS,      KC_RGUI,KC_TRNS,   KC_TRNS
 		    							               //`-------------------------------'      `-------------------------------'
@@ -117,14 +117,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	    									               KC_TRNS,    KC_TRNS,  KC_TRNS, 	     KC_TRNS, KC_TRNS,  KC_TRNS
 		    							               //`-------------------------------'      `-------------------------------'
     ),
-    // SYMBOLS / Shortcuts (MacOS)
+    // SYMBOLS / Shortcuts (MacOS)KC_EQL, KC_GT
     [8] = LAYOUT_split_3x6_3(
         //,-----------------------------------------------------------------------.                    ,-----------------------------------------------------------------------.
-           LGUI(KC_TAB), LGUI(KC_Q), LGUI(KC_W), LGUI(KC_F), LGUI(KC_P), LGUI(KC_B),                    KC_AMPR,    KC_DLR,     KC_LCBR,    KC_RCBR,    KC_UNDERSCORE, LGUI(KC_BSPC),
+           LGUI(KC_TAB), LGUI(KC_Q), LGUI(KC_W), LGUI(KC_F), LGUI(KC_P), LGUI(KC_B),                    KC_AMPR,    KC_LBRC,     KC_LCBR,    KC_RCBR,    KC_RBRC, LGUI(KC_BSPC),
         //|-----------+-----------+-----------+-----------+-----------+-----------|                    |-----------+-----------+-----------+-----------+-----------+-----------|
-           KC_TRNS,  LGUI(KC_A),  LGUI(KC_R),  LGUI(KC_S),  LGUI(KC_T),  LGUI(KC_G),                    KC_PLUS,    KC_EQL,     KC_LPRN,    KC_RPRN,    KC_GT,      LSFT(KC_QUOT),
+           KC_TRNS,  LGUI(KC_A),  LGUI(KC_R),  LGUI(KC_S),  LGUI(KC_T),  LGUI(KC_G),                    KC_DLR,    KC_EQL,     KC_LPRN,    KC_RPRN,    KC_GT,      KC_GRV,
         //|-----------+-----------+-----------+-----------+-----------+-----------|                    |-----------+-----------+-----------+-----------+-----------+-----------|
-           KC_TRNS,  LGUI(KC_Z),  LGUI(KC_X),  LGUI(KC_C),  LGUI(KC_D),  LGUI(KC_V),                    KC_TILDE,   KC_PIPE,    KC_LBRC,    KC_RBRC,    LGUI(KC_SLSH), KC_BSLS,
+           KC_TRNS,  LGUI(KC_Z),  LGUI(KC_X),  LGUI(KC_C),  LGUI(KC_D),  LGUI(KC_V),                    KC_CIRC,   KC_PIPE,    KC_ASTR,    KC_EXLM,    KC_BSLS, LGUI(KC_SLSH),
         //|-----------+-----------+-----------+-----------+-----------+-----------+------|      |------+-----------+-----------+-----------+-----------+-----------+-----------|
                                                            KC_TRNS, KC_TRNS, KC_TRNS,            KC_TRNS, KC_TRNS,  KC_TRNS
 		    							               //`-------------------------------'      `-------------------------------'
@@ -132,11 +132,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // SYMBOLS / Shortcuts (Windows)
     [9] = LAYOUT_split_3x6_3(
         //,-----------------------------------------------------------------------.                    ,-----------------------------------------------------------------------.
-           LCTL(KC_TAB), LCTL(KC_Q), LCTL(KC_W), LCTL(KC_F), LCTL(KC_P), LCTL(KC_B),                    KC_AMPR,    KC_DLR,     KC_LCBR,    KC_RCBR,    KC_UNDERSCORE, LCTL(KC_BSPC),
+           LCTL(KC_TAB), LCTL(KC_Q), LCTL(KC_W), LCTL(KC_F), LCTL(KC_P), LCTL(KC_B),                    KC_AMPR,    KC_LBRC,     KC_LCBR,    KC_RCBR,    KC_RBRC, LCTL(KC_BSPC),
         //|-----------+-----------+-----------+-----------+-----------+-----------|                    |-----------+-----------+-----------+-----------+-----------+-----------|
-           KC_TRNS,    LCTL(KC_A), LCTL(KC_R), LCTL(KC_S), LCTL(KC_T), LCTL(KC_G),                      KC_PLUS,    KC_EQL,     KC_LPRN,    KC_RPRN,    KC_GT,      LSFT(KC_QUOT),
+           KC_TRNS,    LCTL(KC_A), LCTL(KC_R), LCTL(KC_S), LCTL(KC_T), LCTL(KC_G),                      KC_DLR,    KC_EQL,     KC_LPRN,    KC_RPRN,    KC_GT,      KC_GRV,
         //|-----------+-----------+-----------+-----------+-----------+-----------|                    |-----------+-----------+-----------+-----------+-----------+-----------|
-           KC_TRNS,    LCTL(KC_Z), LCTL(KC_X), LCTL(KC_C), LCTL(KC_D), LCTL(KC_V),                      KC_TILDE,   KC_PIPE,    KC_LBRC,    KC_RBRC,    LCTL(KC_SLSH), KC_BSLS,
+           KC_TRNS,    LCTL(KC_Z), LCTL(KC_X), LCTL(KC_C), LCTL(KC_D), LCTL(KC_V),                      KC_CIRC,   KC_PIPE,    KC_ASTR,    KC_EXLM,    KC_BSLS, LCTL(KC_SLSH),
         //|-----------+-----------+-----------+-----------+-----------+-----------+------|      |------+-----------+-----------+-----------+-----------+-----------+-----------|
                                                            KC_TRNS,    KC_TRNS,   KC_TRNS,       KC_TRNS, KC_TRNS,  KC_TRNS
 		    							               //`-------------------------------'      `-------------------------------'
@@ -144,7 +144,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // NUMBERS
     [10] = LAYOUT_split_3x6_3(
         //,-----------------------------------------------------------------------.                    ,-----------------------------------------------------------------------.
-           KC_TRNS,    KC_EXLM,    KC_AT,      KC_HASH,    KC_DLR,     KC_PERC,                         KC_CIRC,    KC_AMPR,    KC_ASTR,    KC_PLUS,    KC_COLN,    KC_BSPC,
+           KC_TILDE,    KC_EXLM,    KC_AT,      KC_HASH,    KC_DLR,     KC_PERC,                         KC_CIRC,    KC_AMPR,    KC_ASTR,    KC_PLUS,    KC_COLN,    KC_BSPC,
         //|-----------+-----------+-----------+-----------+-----------+-----------|                    |-----------+-----------+-----------+-----------+-----------+-----------|
            KC_COMM,    KC_4,       KC_3,       KC_2,       KC_1,       KC_5,                            KC_6,       KC_0,       KC_9,       KC_8,       KC_7,       KC_DOT,
         //|-----------+-----------+-----------+-----------+-----------+-----------|                    |-----------+-----------+-----------+-----------+-----------+-----------|
@@ -325,32 +325,9 @@ void oled_task_user(void) {
 
 #endif // OLED_ENABLE
 
-uint32_t layer_state_set_user(layer_state_t state) {
-    switch (biton32(default_layer_state)) {
-        case L_MAC:
-            key_override_on();
-            break;
-        case L_WINDOWS:
-            key_override_on();
-            break;
-        default:
-            key_override_off();
-            break;
-    }
-
-    return state;
-};
-
-const uint16_t PROGMEM hyphen_combo[] = {KC_DOT, KC_COMM, COMBO_END};
-const uint16_t PROGMEM exclamation_combo[] = {KC_DOT, KC_H, COMBO_END};
+const uint16_t PROGMEM grv_combo[] = {KC_M, KC_N, COMBO_END};
+const uint16_t PROGMEM exclamation_combo[] = {KC_DOT, KC_COMM, COMBO_END};
 combo_t key_combos[COMBO_COUNT] = {
-    COMBO(hyphen_combo, KC_MINS),
+    COMBO(grv_combo, KC_GRV),
     COMBO(exclamation_combo, KC_EXLM), // keycodes with modifiers are possible too!
 };
-
-// const key_override_t shift_space_override = ko_make_basic(MOD_MASK_SHIFT, KC_SPACE, KC_MINS);
-
-// const key_override_t **key_overrides = (const key_override_t *[]){
-//     &shift_space_override,
-//     NULL
-// };
