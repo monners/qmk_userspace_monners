@@ -3,7 +3,6 @@ This is the c configuration file for the keymap
 
 Copyright 2012 Jun Wako <wakojun@gmail.com>
 Copyright 2015 Jack Humbert
-
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 2 of the License, or
@@ -29,15 +28,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define PERMISSIVE_HOLD
 #define TAPPING_TERM 200
-#define ONESHOT_TIMEOUT 3000
+#define ONESHOT_TIMEOUT 800
 
 #undef RGBLIGHT_ANIMATIONS
 #undef LOCKING_SUPPORT_ENABLE
 #undef LOCKING_RESYNC_ENABLE
 #undef RGBLIGHT_ENABLE
 
-#define COMBO_COUNT 2
-
 #define NO_MUSIC_MODE
-
-// #define OLED_FONT_H "keyboards/crkbd/lib/glcdfont.c"
